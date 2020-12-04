@@ -1,0 +1,177 @@
+[
+    {
+        "id": "be94d222.60f3c8",
+        "type": "tab",
+        "label": "flow-tp",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6c6576f4.87f5d8",
+        "type": "ttn uplink",
+        "z": "be94d222.60f3c8",
+        "name": "ttn-tp",
+        "app": "7d5f8c7e.423a5c",
+        "dev_id": "rn2483-tp",
+        "field": "",
+        "x": 70,
+        "y": 200,
+        "wires": [
+            [
+                "a9057a86.2a69c8",
+                "c9103be5.c0135",
+                "12f1d2d4.5fc975",
+                "2f260ea.5c6a3f2"
+            ]
+        ]
+    },
+    {
+        "id": "a9057a86.2a69c8",
+        "type": "debug",
+        "z": "be94d222.60f3c8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 270,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c9103be5.c0135",
+        "type": "debug",
+        "z": "be94d222.60f3c8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.gaz",
+        "targetType": "msg",
+        "x": 290,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "12f1d2d4.5fc975",
+        "type": "function",
+        "z": "be94d222.60f3c8",
+        "name": "Find gaz name:",
+        "func": "const gazValue = msg.payload.gaz;\nswitch (true) {\n    case (gazValue < 20):\n        gazName = \"Ice\";\n        break;\n    case (gazValue < 50):\n        gazName = \"Water\";\n        break;\n    case (gazValue < 200):\n        gazName = \"Fire\";\n        break;\n    default:\n        gazName = \"Lava\";\n        break;\n}\n\nreturn {payload: gazName}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "65670b0a.8627b4"
+            ]
+        ]
+    },
+    {
+        "id": "2c4e8547.89a33a",
+        "type": "ui_chart",
+        "z": "be94d222.60f3c8",
+        "name": "",
+        "group": "da83a17c.4c3138",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Gaz level:",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f260ea.5c6a3f2",
+        "type": "function",
+        "z": "be94d222.60f3c8",
+        "name": "Get gaz value",
+        "func": "\nreturn {payload: msg.payload.gaz}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "2c4e8547.89a33a"
+            ]
+        ]
+    },
+    {
+        "id": "65670b0a.8627b4",
+        "type": "ui_text",
+        "z": "be94d222.60f3c8",
+        "group": "da83a17c.4c3138",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Gaz name:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7d5f8c7e.423a5c",
+        "type": "ttn app",
+        "z": "",
+        "appId": "0824112020",
+        "accessKey": "ttn-account-v2.JtjQd5zh1kYvWLEZmdi9earhZpSCU5mnKdqdQAwlW3c",
+        "discovery": "discovery.thethingsnetwork.org:1900"
+    },
+    {
+        "id": "da83a17c.4c3138",
+        "type": "ui_group",
+        "z": "",
+        "name": "Default",
+        "tab": "a4f7b851.70733",
+        "order": 1,
+        "disp": false,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "a4f7b851.70733",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
