@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name aopsensor)(type Legacy)(uri ${KIPRJMOD}/lib/aopsensor.lib)(options "")(descr ""))
+  (lib (name Sensor_Gas)(type Legacy)(uri ${KIPRJMOD}/lib/Sensor_Gas.lib)(options "")(descr ""))
+  (lib (name RN2483)(type Legacy)(uri ${KIPRJMOD}/lib/RN2483.lib)(options "")(descr ""))
 )
