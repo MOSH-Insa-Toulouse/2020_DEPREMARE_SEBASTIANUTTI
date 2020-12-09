@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AOPSENSOR
+D Rail-to-Rail Input, Rail-to-Rail Output, Zero-Drift Op Amp, DIP-8, SOIC-8
+K single opamp
+F https://www.analog.com/media/en/technical-documentation/data-sheets/lt1152.pdf
+$ENDCMP
+#
+#End Doc Library

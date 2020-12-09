@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Arduino_As_Uno-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -298,4 +297,232 @@ Wire Notes Line
 	11200 1000 10700 1000
 Wire Notes Line
 	10700 1000 10700 500 
+$Comp
+L Device:R R3
+U 1 1 5FD0C324
+P 3000 5200
+F 0 "R3" V 3207 5200 50  0000 C CNN
+F 1 "10k" V 3116 5200 50  0000 C CNN
+F 2 "" V 2930 5200 50  0001 C CNN
+F 3 "~" H 3000 5200 50  0001 C CNN
+	1    3000 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5FD11DF9
+P 4000 5450
+F 0 "R4" H 4070 5496 50  0000 L CNN
+F 1 "100k" H 4070 5405 50  0000 L CNN
+F 2 "" V 3930 5450 50  0001 C CNN
+F 3 "~" H 4000 5450 50  0001 C CNN
+	1    4000 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5FD13C7B
+P 4500 5450
+F 0 "R5" H 4570 5496 50  0000 L CNN
+F 1 "1k" H 4570 5405 50  0000 L CNN
+F 2 "" V 4430 5450 50  0001 C CNN
+F 3 "~" H 4500 5450 50  0001 C CNN
+	1    4500 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FD19865
+P 3500 5450
+F 0 "C1" H 3615 5496 50  0000 L CNN
+F 1 "C" H 3615 5405 50  0000 L CNN
+F 2 "" H 3538 5300 50  0001 C CNN
+F 3 "~" H 3500 5450 50  0001 C CNN
+	1    3500 5450
+	1    0    0    -1  
+$EndComp
+Text GLabel 2500 5200 0    50   Input ~ 0
+Rsensor
+Wire Wire Line
+	2500 5200 2850 5200
+$Comp
+L aopsensor:AOPSENSOR U?
+U 1 1 5FD246FD
+P 5050 5100
+F 0 "U?" H 5394 5146 50  0000 L CNN
+F 1 "AOPSENSOR" H 5394 5055 50  0000 L CNN
+F 2 "" H 4250 5450 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/lt1152.pdf" H 4250 5450 50  0001 C CNN
+	1    5050 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 5200 3500 5200
+Wire Wire Line
+	3500 5300 3500 5200
+Connection ~ 3500 5200
+Wire Wire Line
+	3500 5200 4000 5200
+Wire Wire Line
+	4000 5300 4000 5200
+Connection ~ 4000 5200
+$Comp
+L power:GND #PWR?
+U 1 1 5FD297DE
+P 5050 5850
+F 0 "#PWR?" H 5050 5600 50  0001 C CNN
+F 1 "GND" H 5055 5677 50  0000 C CNN
+F 2 "" H 5050 5850 50  0001 C CNN
+F 3 "" H 5050 5850 50  0001 C CNN
+	1    5050 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5350 5050 5750
+Wire Wire Line
+	3500 5600 3500 5750
+Wire Wire Line
+	3500 5750 4000 5750
+Connection ~ 5050 5750
+Wire Wire Line
+	5050 5750 5050 5850
+Wire Wire Line
+	4000 5600 4000 5750
+Connection ~ 4000 5750
+Wire Wire Line
+	4500 5600 4500 5750
+Connection ~ 4500 5750
+Wire Wire Line
+	4500 5750 5050 5750
+Wire Wire Line
+	4000 5750 4500 5750
+Wire Wire Line
+	4000 5200 4750 5200
+Wire Wire Line
+	4500 5300 4500 5000
+Wire Wire Line
+	4500 5000 4750 5000
+$Comp
+L Device:C C2
+U 1 1 5FD35B4A
+P 5700 4600
+F 0 "C2" H 5815 4646 50  0000 L CNN
+F 1 "1µ" H 5815 4555 50  0000 L CNN
+F 2 "" H 5738 4450 50  0001 C CNN
+F 3 "~" H 5700 4600 50  0001 C CNN
+	1    5700 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5FD36372
+P 6200 4600
+F 0 "R6" H 6270 4646 50  0000 L CNN
+F 1 "100k" H 6270 4555 50  0000 L CNN
+F 2 "" V 6130 4600 50  0001 C CNN
+F 3 "~" H 6200 4600 50  0001 C CNN
+	1    6200 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5FD36901
+P 6900 5100
+F 0 "R7" V 6693 5100 50  0000 C CNN
+F 1 "1k" V 6784 5100 50  0000 C CNN
+F 2 "" V 6830 5100 50  0001 C CNN
+F 3 "~" H 6900 5100 50  0001 C CNN
+	1    6900 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5FD3742B
+P 7250 5350
+F 0 "C4" H 7365 5396 50  0000 L CNN
+F 1 "100n" H 7365 5305 50  0000 L CNN
+F 2 "" H 7288 5200 50  0001 C CNN
+F 3 "~" H 7250 5350 50  0001 C CNN
+	1    7250 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 5100 5700 5100
+Wire Wire Line
+	5700 4750 5700 5100
+Connection ~ 5700 5100
+Wire Wire Line
+	5700 5100 6200 5100
+Wire Wire Line
+	6200 4750 6200 5100
+Connection ~ 6200 5100
+Wire Wire Line
+	6200 5100 6750 5100
+Wire Wire Line
+	5700 4450 4500 4450
+Wire Wire Line
+	4500 4450 4500 5000
+Connection ~ 4500 5000
+Wire Wire Line
+	6200 4450 5700 4450
+Connection ~ 5700 4450
+Text GLabel 7500 5100 2    50   Input ~ 0
+A1
+Wire Wire Line
+	7050 5100 7250 5100
+Wire Wire Line
+	7250 5100 7250 5200
+Wire Wire Line
+	7250 5100 7500 5100
+Connection ~ 7250 5100
+Wire Wire Line
+	7250 5500 7250 5750
+Wire Wire Line
+	7250 5750 5050 5750
+$Comp
+L Device:C C3
+U 1 1 5FD44651
+P 6900 4200
+F 0 "C3" H 7015 4246 50  0000 L CNN
+F 1 "100n" H 7015 4155 50  0000 L CNN
+F 2 "" H 6938 4050 50  0001 C CNN
+F 3 "~" H 6900 4200 50  0001 C CNN
+	1    6900 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD4543E
+P 6900 4500
+F 0 "#PWR?" H 6900 4250 50  0001 C CNN
+F 1 "GND" H 6905 4327 50  0000 C CNN
+F 2 "" H 6900 4500 50  0001 C CNN
+F 3 "" H 6900 4500 50  0001 C CNN
+	1    6900 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD45BF8
+P 7150 3750
+F 0 "#PWR?" H 7150 3600 50  0001 C CNN
+F 1 "+5V" H 7165 3923 50  0000 C CNN
+F 2 "" H 7150 3750 50  0001 C CNN
+F 3 "" H 7150 3750 50  0001 C CNN
+	1    7150 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4500 6900 4350
+Wire Wire Line
+	7150 3750 7150 3900
+Wire Wire Line
+	7150 3900 6900 3900
+Wire Wire Line
+	5050 3900 5050 4850
+Wire Wire Line
+	6900 4050 6900 3900
+Connection ~ 6900 3900
+Wire Wire Line
+	6900 3900 5050 3900
 $EndSCHEMATC
