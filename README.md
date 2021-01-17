@@ -57,4 +57,4 @@ Comme présenté sur la figure ci-dessus, nous avons mesuré la consomation du s
 
 ## Utilisation des données
 
-Une fois sur TTN, nous avons utilisé un serveur gratuit Node Red pour visualiser les données et en avons fait un graph. Nous avon voulu intégrer cette vue à una application mobile développée grace au MIT App Inventor mais le serveur Node Red ne permettant l'accès qu'à une socket particulière nous à empêcher de mener le projet à bout.
+Une fois sur TTN, nous avons utilisé un serveur gratuit Node Red pour visualiser les données et en avons fait un graph. Nous avon voulu intégrer cette vue à una application mobile développée grace au MIT App Inventor mais le serveur Node Red ne permettant l'accès qu'à une socket particulière nous à empêché de mener le projet à bout.
